@@ -14,9 +14,9 @@ source:
   sha256: 343df84327ac3d03494992e79ee3afc78ba3bdc08af9a305ee3fb0a38745cb0a
 
 build:
+  noarch: generic
   merge_build_host: True  # [win]
-  number: 1
-  skip: true  # [win32]
+  number: 1001
   rpaths:
     - lib/R/lib/
     - lib/
@@ -59,8 +59,7 @@ about:
     separate axes (''overplot''), - plotting means and confidence intervals (''plotCI'',
     ''plotmeans''), - spacing points in an x-y plot so they don''t overlap (''space'').'
   license_family: GPL2
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'  # [unix]
-  license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-2'  # [win]
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
 
 extra:
   recipe-maintainers:
