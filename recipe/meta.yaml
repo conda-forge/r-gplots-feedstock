@@ -7,16 +7,15 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: gplots_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/gplots_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/gplots/gplots_{{ version }}.tar.gz
   sha256: f9ae19c2574b6d41adbeccaf7bc66cf56d7b2769004daba7e0038d5fbd821339
 
 build:
-  noarch: generic
   merge_build_host: true  # [win]
   number: 0
+  noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
@@ -44,13 +43,14 @@ test:
 
 about:
   home: https://CRAN.R-project.org/package=gplots
-  license: GPL-2
+  license: GPL-2.0-only
   summary: "Various R programming tools for plotting data, including: - calculating and plotting locally smoothed summary function as ('bandplot', 'wapply'), - enhanced versions of standard plots ('barplot2', 'boxplot2', 'heatmap.2', 'smartlegend'), - manipulating colors ('col2hex', 'colorpanel', 'redgreen', 'greenred',\
     \ 'bluered', 'redblue', 'rich.colors'), - calculating and plotting two-dimensional data summaries ('ci2d', 'hist2d'), - enhanced regression diagnostic plots ('lmplot2', 'residplot'), - formula-enabled interface to 'stats::lowess' function ('lowess'), - displaying textual data in plots ('textplot', 'sinkplot'), - plotting\
     \ a matrix where each cell contains a dot whose size reflects the relative magnitude of the elements ('balloonplot'), - plotting \"Venn\" diagrams ('venn'), - displaying Open-Office style plots ('ooplot'), - plotting multiple data on same region, with separate axes ('overplot'), - plotting means and confidence intervals\
     \ ('plotCI', 'plotmeans'), - spacing points in an x-y plot so they don't overlap ('space')."
   license_family: GPL2
-  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
