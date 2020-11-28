@@ -27,13 +27,11 @@ requirements:
     - r-base
     - r-kernsmooth
     - r-catools
-    - r-gdata
     - r-gtools
   run:
     - r-base
     - r-kernsmooth
     - r-catools
-    - r-gdata
     - r-gtools
 
 test:
