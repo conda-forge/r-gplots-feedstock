@@ -3,7 +3,7 @@ About r-gplots
 
 Home: https://CRAN.R-project.org/package=gplots
 
-Package license: GPL-2
+Package license: GPL-2.0-only
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-gplots-feedstock/blob/master/LICENSE.txt)
 
