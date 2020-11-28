@@ -1,4 +1,4 @@
-{% set version = "3.1.0" %}
+{% set version = "3.1.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -11,7 +11,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/gplots_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/gplots/gplots_{{ version }}.tar.gz
-  sha256: 4438c30be97720d2a7312e98757357cf85080960db73066b2bdb70f538d53117
+  sha256: f9ae19c2574b6d41adbeccaf7bc66cf56d7b2769004daba7e0038d5fbd821339
 
 build:
   noarch: generic
