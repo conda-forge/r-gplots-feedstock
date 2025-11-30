@@ -1,4 +1,4 @@
-{% set version = "3.2.0" %}
+{% set version = "3.3.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/gplots_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/gplots/gplots_{{ version }}.tar.gz
-  sha256: 12e31c69b487471ca334cd55b6d91da36670d8b4e4b3fdcbfd6b7e20f55f4f47
+  sha256: f84c0b38d8fdbb6aa45fa81b9b21ee96f2c5891a5d37c77643977d06a66be302
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
